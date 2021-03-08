@@ -76,10 +76,10 @@ namespace TryCatch
             foreach (string email in emails)
             {
 
-                // Instantiate the 
+                // Instantiate contact - make it into a variable you can use again
                 Contact contact = addressBook.GetByEmail(email);
                 // If the contact returns null and none of those properties below return anything because contact is null
-                // Move on
+                // Move on to the next contact
                 if (contact != null)
                 {
                     Console.WriteLine("----------------------------");
@@ -87,6 +87,7 @@ namespace TryCatch
                     Console.WriteLine($"Email: {contact.Email}");
                     Console.WriteLine($"Address: {contact.Address}");
                 }
+                // Don't need it, but it's good to specify what exactly is null
                 else
                 {
                     Console.WriteLine("----------------------------");
